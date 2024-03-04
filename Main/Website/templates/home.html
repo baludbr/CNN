@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Classifier</title>
+</head>
+<body>
+    <h1>CNN Classifier</h1>
+    <h6>Got Accuracy of 92.6% with 5 epochs</h6>
+
+    <form action="{% url 'pred' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        <input type="file" name="file" accept=".jpg, .jpeg, .png" required>
+        <button type="submit">Got Now!!</button>
+    </form>
+    {{acc}}
+</body>
+</html>
